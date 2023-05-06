@@ -38,7 +38,7 @@ public class CompanyInfoController {
     }
 
     @DeleteMapping("/employees/{id}")
-    public void deleteEmployee(@PathVariable Long id, @RequestBody Employee employee){
+    public void deleteEmployee(@PathVariable Long id){
         employeeService.deleteEmployee(id);
     }
 

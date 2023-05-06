@@ -3,20 +3,21 @@ package com.foottech.foodproject.services;
 import com.foottech.foodproject.entities.Department;
 import com.foottech.foodproject.entities.Employee;
 import com.foottech.foodproject.repositories.DepartmentRepository;
-import com.foottech.foodproject.repositories.EmployerRepository;
+import com.foottech.foodproject.repositories.EmployeeRepository;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @AllArgsConstructor
 @Transactional
 public class EmployeeService {
 
-    private final EmployerRepository employeeRepository;
+    private final EmployeeRepository employeeRepository;
     private final DepartmentRepository departmentRepository;
 
     public List<Employee> getAllEmployees(){
