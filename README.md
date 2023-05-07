@@ -14,9 +14,6 @@ docker run -d -p 8090:8090 department-app
 docker stop <imageID>  #if you want to stop
 ```
 
-Example; <br/>
-[localhost:8090/api/v1/departments](localhost:8090/api/v1/departments)
-
 * in properties.yml file 
 ```yml
 spring:
@@ -82,9 +79,18 @@ volumes:
 
 ---
 #### Optional
+* [ ] add HATEOAS
 * [ ] Alias domain (DNS)
 
 ---
 #### Examples
 
 Rest API Test Sets for Insomnia; [Foottec_Insomnia_test_set.yaml](./Foottec_Insomnia_test_set.yaml)
+<br/>
+<br/>
+Examples; <br/>
+[localhost:8090/api/v1/employees](localhost:8090/api/v1/employees)<br/>
+[localhost:8090/api/v1/employees/{id}](localhost:8090/api/v1/employees/1)<br/>
+[localhost:8090/api/v1/departments](localhost:8090/api/v1/departments)<br/>
+[localhost:8090/api/v1/departments/{id}](localhost:8090/api/v1/departments/1)<br/>
+
