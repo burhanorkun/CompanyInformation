@@ -94,3 +94,47 @@ Examples; <br/>
 [localhost:8090/api/v1/departments](localhost:8090/api/v1/departments)<br/>
 [localhost:8090/api/v1/departments/{id}](localhost:8090/api/v1/departments/1)<br/>
 
+
+```shell
+# get employees 
+http://localhost:8090/api/v1/employees  
+[{"id":5,"name":"Erkan","email":"erkan@gmail.com","department":{"id":2,"name":"VAS","description":"Value Added Services"}},{"id":1,"name":"Burhan Orkun","email":"burhanorkun@gmail.com","department":{"id":1,"name":"CRM","description":"Customer Relation Management2"}}]  
+```
+```shell
+# findById employee
+curl http://localhost:8090/api/v1/employees/5
+{"id":5,"name":"Erkan","email":"erkan@gmail.com","department":{"id":2,"name":"VAS","description":"Value Added Services"}}
+```
+```shell
+# post employee
+curl -H "Content-Type: application/json" http://localhost:8090/api/v1/employees -d '{"name": "Cem","email": "cem@gmail.com","department": {"id": 2}}'
+{"id":32,"name":"Cem","email":"cem@gmail.com","department":{"id":2,"name":"VAS","description":"Value Added Services"}}
+```
+```shell
+# delete employee 
+curl -XDELETE http://localhost:8090/api/v1/employees/3
+```
+
+--- 
+
+```shell
+# get department 
+curl http://localhost:8090/api/v1/departments
+[{"id":1,"name":"CRM","description":"Customer Relation Management2"},{"id":2,"name":"VAS","description":"Value Added Services"},{"id":17,"name":"IT","description":"Information Technology"}]%
+```
+```shell
+# findById department
+curl http://localhost:8090/api/v1/department/1
+{"id":1,"name":"CRM","description":"Customer Relation Management2"}
+```
+```shell
+# post department
+curl -H "Content-Type: application/json" http://localhost:8090/api/v1/department -d '{"name": "CRM","description": "CRM desc"}'
+{"name": "CRM","description": "CRM desc"}
+```
+```shell
+# delete department 
+curl -XDELETE http://localhost:8090/api/v1/department/3
+```
+
+
