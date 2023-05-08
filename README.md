@@ -97,7 +97,7 @@ Examples; <br/>
 
 ```shell
 # get employees 
-http://localhost:8090/api/v1/employees  
+curl http://localhost:8090/api/v1/employees  
 [{"id":5,"name":"Erkan","email":"erkan@gmail.com","department":{"id":2,"name":"VAS","description":"Value Added Services"}},{"id":1,"name":"Burhan Orkun","email":"burhanorkun@gmail.com","department":{"id":1,"name":"CRM","description":"Customer Relation Management2"}}]  
 ```
 ```shell
