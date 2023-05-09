@@ -73,6 +73,7 @@ volumes:
     * [x] Controllers
     * [x] Docker
     * [x] Docker Compose
+    * [ ] Authentication and Authorization implementation (JWT or OAuth or SAML)
     * [ ] Swagger Implementation
     * [ ] Terraform for AWS Beanstalk
     * [ ] Deploy with CI/CD automation
