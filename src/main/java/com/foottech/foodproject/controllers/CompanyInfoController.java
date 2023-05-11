@@ -67,10 +67,4 @@ public class CompanyInfoController {
         departmentService.deleteDepartment(id);
     }
 
-    /*
-    @GetMapping("/employees-with-departments")
-    public List<EmployeeDepartmentDto> getEmployeesWithDepartments() {
-        return employeeService.getEmployeesWithDepartments();
-    } */
-
 }
