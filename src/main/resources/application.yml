@@ -3,10 +3,14 @@ server:
 
 # db layer
 spring:
+  application:
+    name: department-api
   datasource:
-    url: jdbc:postgresql://food-tech.cfaqce9zt6sm.eu-central-1.rds.amazonaws.com:5432/postgres
+    # url: jdbc:postgresql://food-tech.cfaqce9zt6sm.eu-central-1.rds.amazonaws.com:5432/postgres
+    url: jdbc:postgresql://localhost:5432/mydb
     username: postgres
-    password: burhanorkun
+    # password: burhanorkunpass
+    password: pass
   jpa:
     show-sql: true
     generate-ddl: true
@@ -22,4 +26,39 @@ spring:
     jpa:
       repositories:
         enabled: true
+  output:
+    ansi:
+      enabled: always
+  # MailHog provides a local SMTP server for capturing and viewing emails during local development/testing.
+  mail:
+    host: ${EMAIL_HOST:localhost}
+    port: 1025
+    protocol: smtp
+    properties:
+      mail:
+        smtp:
+          auth: false
+          starttls:
+            enable: false
 
+
+#  You can also use Mailtrap which is an Email Delivery Platform. You have to create an account https://mailtrap.io/
+#  mail:
+#    host: smtp.mailtrap.io
+#    port: 25
+#    protocol: smtp
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true
+#          starttls:
+#            enable: true
+#    username: <put-your-smtp-username>
+#    password: <put-your-smtp-password>
+
+
+springdoc:
+  swagger-ui:
+    use-root-path: true
+    default-models-expand-depth: -1
+  version: '@springdoc-openapi-starter-webmvc-ui.version@'
